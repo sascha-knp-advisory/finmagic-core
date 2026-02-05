@@ -1,11 +1,17 @@
 import SectionWrapper from "./SectionWrapper";
-import { Calculator, Wrench, Landmark, Scale } from "lucide-react";
+
+
+import { Calculator, Wrench, Landmark, Scale, Users, BarChart3, Palette, Code } from "lucide-react";
 
 const categories = [
   { icon: Calculator, title: "Tax & Accounting", desc: "Tax advisors we partner with" },
   { icon: Wrench, title: "Tools & Implementations", desc: "A full suite of tools we work with" },
   { icon: Landmark, title: "Banking / Debt / Leasing", desc: "Financing providers we have at hand" },
   { icon: Scale, title: "Legal (Corporate / VC / M&A)", desc: "Lawyers we can recommend" },
+  { icon: Users, title: "HR & Organizational Development", desc: "People & culture experts we trust" },
+  { icon: BarChart3, title: "Go to Market / Marketing Analytics", desc: "Growth & analytics partners we rely on" },
+  { icon: Palette, title: "Product & Design", desc: "Designers & product thinkers we collaborate with" },
+  { icon: Code, title: "Technology", desc: "Tech partners & engineers in our network" },
 ];
 
 const Network = () => (
