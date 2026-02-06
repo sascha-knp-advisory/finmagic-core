@@ -12,6 +12,7 @@ const cases = [
 const industries = [
   "SaaS", "Tech-enabled services", "Climate/Energy", "Digital health",
   "E-commerce & Marketplace", "Manufacturing & Hardware", "Mobility/Logistics", "D2C & Consumer",
+  "EdTech", "Marketing/AdTech", "FinTech/InsureTech", "Media & Digital Publishing",
 ];
 
 const Experience = () => (
