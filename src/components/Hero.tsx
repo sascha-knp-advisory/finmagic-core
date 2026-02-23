@@ -25,7 +25,7 @@ const Hero = () => <section className="relative min-h-screen flex items-center j
     }} transition={{
       duration: 0.6,
       delay: 0.15
-    }} className="mt-6 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-primary">End-to-end finance operations and CFO support for Startups and Scaleups. Built for speed, accuracy, and scale—with automation and AI where it matters.
+    }} className="mt-6 text-lg max-w-2xl mx-auto leading-relaxed text-primary md:text-xl">End-to-end finance operations and CFO support for Startups and Scaleups. Built for speed, accuracy, and scale—with automation and AI where it matters.
 
 
     </motion.p>
@@ -44,7 +44,7 @@ const Hero = () => <section className="relative min-h-screen flex items-center j
           <a href="#contact">Book a 30-min intro call</a>
         </Button>
         <Button variant="ghost-light" size="lg" className="text-base px-8 py-6" asChild>
-          <a href="#contact">Financial Health Assessment
+          <a href="#contact">Finance Health Assessment
         </a>
         </Button>
       </motion.div>
