@@ -4,7 +4,7 @@ const cases = [
   { challenge: "Close mess", solution: "Close calendar + clear responsibilities + reconciliations", result: "Close time reduced from 20 to 5 days" },
   { challenge: "Finance team drowning", solution: "System and process implementation", result: "80% time saving in finance operations" },
   { challenge: "Investor confidence eroded", solution: "Streamlined reporting process + clear metrics", result: "Board-ready reporting every month" },
-  { challenge: "Cash runway too short", solution: "Short-term liquidity measures + long-term funding plan", result: "Runway extended" },
+  { challenge: "Cash runway squeeze", solution: "Short-term liquidity measures + long-term funding plan", result: "Runway extended" },
   { challenge: "Pre-fundraise cold sweat", solution: "Finance clean-up + data room preparation", result: "Smooth diligence, less time to closing" },
   { challenge: "Exit desire", solution: "Full exit preparation (mgmt presentation + data room)", result: "Orchestrated sale process, competitive bids" },
 ];
