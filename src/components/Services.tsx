@@ -5,7 +5,7 @@ const services = [
 {
   icon: BookOpen,
   title: "Bookkeeping & Finance Ops Automation",
-  desc: "Monthly close within 5 days — with accuracy and speed.",
+  desc: "Monthly close within 5 days — with accuracy, speed and confidence.",
   bullets: ["Automated processes", "Approval & payments", "Investor-ready numbers"]
 },
 {
