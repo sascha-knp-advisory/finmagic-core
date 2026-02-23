@@ -39,7 +39,7 @@ const Contact = () => {
                 <SelectItem value="seed">Seed</SelectItem>
                 <SelectItem value="series-a">Series A</SelectItem>
                 <SelectItem value="series-b">Series B+</SelectItem>
-                <SelectItem value="smb">SMB</SelectItem>
+                <SelectItem value="smb">Small & Medium Business</SelectItem>
               </SelectContent>
             </Select>
             <Textarea placeholder="Message" rows={4} className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
