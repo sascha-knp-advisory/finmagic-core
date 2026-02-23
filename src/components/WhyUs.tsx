@@ -35,7 +35,7 @@ const steps = [{
   time: "ongoing",
   lines: ["Ongoing Finance Ops, Controlling and CFO support"]
 }];
-const benefits = ["Clear & reliable execution: we bring a clear plan and execute like clockwork", "Better systems & processes: we build efficient workflows, you get reliable data quality", "Team member upskilling: we empower your team, you build internal capabilities", "Money back guarantee: 100% refund, if you aren't satisfied"];
+const benefits = ["Clear & reliable execution: we bring a clear plan and execute like clockwork", "Better systems & processes: we build efficient workflows, you get reliable data quality", "Team member upskilling: we empower your team, you build internal capabilities", "Outcome based delivery: we focus on results, you benefit with tangible ROI"];
 const WhyUs = () => <SectionWrapper id="why-us">
     <h2 className="text-3xl md:text-5xl font-bold text-foreground">Why work with us</h2>
 
