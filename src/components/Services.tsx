@@ -17,7 +17,7 @@ const services = [
 {
   icon: Target,
   title: "KPI & Performance Management",
-  desc: "A lightweight performance system your board will back.",
+  desc: "A lightweight performance system that is intuitive and your board will back.",
   bullets: ["North-star metrics", "Operating cadence", "Board packs"]
 },
 {
