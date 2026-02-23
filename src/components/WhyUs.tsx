@@ -40,7 +40,7 @@ const WhyUs = () => <SectionWrapper id="why-us">
     <h2 className="text-3xl md:text-5xl font-bold text-foreground">Why work with us</h2>
 
     <div className="mt-14 grid md:grid-cols-2 gap-8">
-      {reasons.map(r => <div key={r.title}>
+      {reasons.map((r) => <div key={r.title}>
           <h3 className="text-lg font-semibold text-destructive">{r.title}</h3>
           <p className="mt-1 text-muted-foreground">{r.desc}</p>
         </div>)}
@@ -48,9 +48,9 @@ const WhyUs = () => <SectionWrapper id="why-us">
 
     {/* How we work */}
     <div className="mt-20">
-      <h3 className="text-2xl font-bold text-foreground mb-8">How we work</h3>
+      <h3 className="text-2xl font-bold text-foreground mb-8">Our approach</h3>
       <div className="grid md:grid-cols-3 gap-6">
-        {steps.map(s => <div key={s.num} className="rounded-xl border border-border bg-card p-6">
+        {steps.map((s) => <div key={s.num} className="rounded-xl border border-border bg-card p-6">
             <div className="flex items-center gap-3 mb-3">
               <span className="flex items-center justify-center h-9 w-9 rounded-full bg-accent text-accent-foreground text-sm font-bold">
                 {s.num}
@@ -61,7 +61,7 @@ const WhyUs = () => <SectionWrapper id="why-us">
               </div>
             </div>
             <ul className="space-y-1">
-              {s.lines.map(l => <li key={l} className="text-sm text-muted-foreground">{l}</li>)}
+              {s.lines.map((l) => <li key={l} className="text-sm text-muted-foreground">{l}</li>)}
             </ul>
           </div>)}
       </div>
@@ -71,7 +71,7 @@ const WhyUs = () => <SectionWrapper id="why-us">
     <div className="mt-14">
       <h3 className="text-2xl font-bold text-foreground mb-6">Your benefits</h3>
       <div className="grid md:grid-cols-2 gap-4">
-        {benefits.map(b => <div key={b} className="flex items-start gap-3">
+        {benefits.map((b) => <div key={b} className="flex items-start gap-3">
             <CheckCircle className="h-5 w-5 text-accent mt-0.5 shrink-0" />
             <p className="text-muted-foreground text-base">{b}</p>
           </div>)}
