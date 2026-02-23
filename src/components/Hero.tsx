@@ -10,7 +10,7 @@ const Hero = () => <section className="relative min-h-screen flex items-center j
       y: 0
     }} transition={{
       duration: 0.6
-    }} className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-foreground">
+    }} className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-foreground lg:text-6xl">
         Clarity in your numbers.
         <br />
         Confidence in your decisions.
@@ -25,10 +25,10 @@ const Hero = () => <section className="relative min-h-screen flex items-center j
     }} transition={{
       duration: 0.6,
       delay: 0.15
-    }} className="mt-6 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-primary">
-        End-to-end finance operations and CFO support for startups and scaleups.
-        Built for speed, accuracy, and scale—with automation and AI where it matters.
-      </motion.p>
+    }} className="mt-6 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-primary">End-to-end finance operations and CFO support for Startups and Scaleups. Built for speed, accuracy, and scale—with automation and AI where it matters.
+
+
+    </motion.p>
 
       <motion.div initial={{
       opacity: 0,
