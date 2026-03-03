@@ -10,7 +10,15 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+    })
+      .then(() => setSubmitted(true))
+      .catch(() => setSubmitted(true));
   };
 
   return (
@@ -26,11 +34,12 @@ const Contact = () => {
             <p className="mt-2 text-muted-foreground">We'll get back to you within 24 hours.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="mt-12 space-y-5">
-            <Input placeholder="Name" required className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
-            <Input type="email" placeholder="Email" required className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
-            <Input placeholder="Company" className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
-            <Select>
+          <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" className="mt-12 space-y-5">
+            <input type="hidden" name="form-name" value="contact" />
+            <Input name="name" placeholder="Name" required className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
+            <Input name="email" type="email" placeholder="Email" required className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
+            <Input name="company" placeholder="Company" className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
+            <Select name="stage">
               <SelectTrigger className="bg-card border-border text-foreground">
                 <SelectValue placeholder="Stage" />
               </SelectTrigger>
@@ -42,7 +51,7 @@ const Contact = () => {
                 <SelectItem value="smb">Small & Medium Business</SelectItem>
               </SelectContent>
             </Select>
-            <Textarea placeholder="Message" rows={4} className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
+            <Textarea name="message" placeholder="Message" rows={4} className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
             <Button variant="accent" size="lg" type="submit" className="w-full text-base">
               Request intro call
             </Button>

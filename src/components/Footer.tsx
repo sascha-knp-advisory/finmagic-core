@@ -7,7 +7,7 @@ const Footer = () => (
       <p>© 2026 KNP Advisory</p>
       <div className="flex items-center gap-6">
         <Link to="/imprint" className="hover:text-foreground transition-colors">Imprint</Link>
-        <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
+        <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
         <a
           href="https://www.linkedin.com/company/knp-advisory"
           target="_blank"

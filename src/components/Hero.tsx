@@ -44,8 +44,7 @@ const Hero = () => <section className="relative min-h-screen flex items-center j
           <a href="#contact">Book a 30-min intro call</a>
         </Button>
         <Button variant="ghost-light" size="lg" className="text-base px-8 py-6" asChild>
-          <a href="#contact">Finance Health Assessment
-        </a>
+          <a href="https://tally.so/r/gDqe8l" target="_blank" rel="noopener noreferrer">Finance Health Assessment</a>
         </Button>
       </motion.div>
     </div>

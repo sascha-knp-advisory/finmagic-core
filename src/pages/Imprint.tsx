@@ -1,6 +1,26 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
+const EmailImage = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 14" className="inline" style={{ height: "0.9em", verticalAlign: "-0.15em" }}>
+    <text x="0" y="11.5" fill="currentColor" fontSize="16" fontFamily="DM Sans, system-ui, sans-serif">info@knp-advisory.com</text>
+  </svg>
+);
+
+const AddressImage = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" className="h-[3.75rem] block">
+    <text x="0" y="15" fill="currentColor" fontSize="14" fontFamily="DM Sans, system-ui, sans-serif">
+      Koenig Advisory UG (haftungsbeschränkt)
+    </text>
+    <text x="0" y="35" fill="currentColor" fontSize="14" fontFamily="DM Sans, system-ui, sans-serif">
+      Immanuelkirchstraße 29a
+    </text>
+    <text x="0" y="55" fill="currentColor" fontSize="14" fontFamily="DM Sans, system-ui, sans-serif">
+      10405 Berlin, Germany
+    </text>
+  </svg>
+);
+
 const Imprint = () => (
   <div className="min-h-screen bg-background text-foreground">
     <div className="container mx-auto px-4 md:px-8 py-16 max-w-2xl">
@@ -12,9 +32,7 @@ const Imprint = () => (
 
       <div className="space-y-6 text-muted-foreground leading-relaxed">
         <div>
-          <p className="font-semibold text-foreground">Koenig Advisory UG (haftungsbeschränkt)</p>
-          <p>Immanuelkirchstraße 29a</p>
-          <p>10405 Berlin, Germany</p>
+          <AddressImage />
         </div>
 
         <div>
@@ -30,8 +48,8 @@ const Imprint = () => (
 
         <div>
           <p className="font-semibold text-foreground">Contact</p>
-          <p>Phone: +49 152 560 37150</p>
-          <p>Email: info@knp-advisory.com</p>
+          <p>Email: <EmailImage /></p>
+          <p>Or via our <Link to="/#contact" className="text-foreground underline hover:no-underline">contact form</Link>.</p>
         </div>
 
         <div>
