@@ -41,7 +41,7 @@ const Hero = () => <section className="relative min-h-screen flex items-center j
       delay: 0.3
     }} className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
         <Button variant="accent" size="lg" className="text-base px-8 py-6" asChild>
-          <a href="#contact">Book a 30-min intro call</a>
+          <a href="https://calendar.app.google/ucm1X1bTqKcT3j3i6" target="_blank" rel="noopener noreferrer">Book a 30-min intro call</a>
         </Button>
         <Button variant="ghost-light" size="lg" className="text-base px-8 py-6" asChild>
           <a href="https://tally.so/r/gDqe8l" target="_blank" rel="noopener noreferrer">Finance Health Assessment</a>
