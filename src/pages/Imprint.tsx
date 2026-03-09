@@ -47,6 +47,11 @@ const Imprint = () => (
         </div>
 
         <div>
+          <p className="font-semibold text-foreground">VAT ID (USt-IdNr.)</p>
+          <p>DE340588532</p>
+        </div>
+
+        <div>
           <p className="font-semibold text-foreground">Contact</p>
           <p>Email: <EmailImage /></p>
           <p>Or via our <Link to="/#contact" className="text-foreground underline hover:no-underline">contact form</Link>.</p>
