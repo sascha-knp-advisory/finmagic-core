@@ -1,6 +1,6 @@
 import SectionWrapper from "./SectionWrapper";
 import { Linkedin } from "lucide-react";
-import steffenImg from "@/assets/steffen-fixson.png";
+import steffenImg from "@/assets/steffen-fixson.jpg";
 import markusImg from "@/assets/markus-koenig.jpg";
 
 const values = ["Ownership", "Hands-on", "Speed", "Transparency", "Efficiency", "Long-term view"];
