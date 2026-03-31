@@ -9,7 +9,7 @@ const founders = [
   {
     name: "Dr. Steffen Fixson",
     role: "Head of Client Development & Executive Advisor",
-    stats: "15+ years of advisory & client development experience • CFO advisory & Finance transformations • Based in Dubai",
+    stats: "15+ years of advisory & client development experience • CFO advisory & Finance transformations",
     linkedin: "https://www.linkedin.com/in/drsteffenfixson/",
     photo: steffenImg,
     bio: "Steffen is an executive advisor and client development leader who partners with startups and scaleups to improve and transform finance processes. His experience includes working with professional leaders across multiple departmental functions, including CFOs, CHROs, and other functional heads. He is customer-centric with a strong focus on goal achievement, supporting clients in their behavioral and organizational change to get future-ready. He holds a BSc, MSc and Ph.D.",
@@ -17,7 +17,7 @@ const founders = [
   {
     name: "Markus König",
     role: "Fractional CFO & Board Advisor",
-    stats: "18+ years in finance leadership • 30+ fundraises & exits supported • Based in Berlin",
+    stats: "18+ years in finance leadership • 30+ fundraises & exits supported",
     linkedin: "https://www.linkedin.com/in/markuskoenig82",
     photo: markusImg,
     bio: "Markus is a finance & operations leader who brings control, clarity, and momentum in high-pressure growth phases. After 10 years in investment banking and an MSc in Management at Stanford, he moved into CFO roles, taking over and transforming finance functions. He has led financings from crowd-style rounds and debt to IPO-scale outcomes, and spent a year leading finance in West Africa for a tech group. He combines rigorous execution with a strong passion for leadership development and transformational coaching.",
