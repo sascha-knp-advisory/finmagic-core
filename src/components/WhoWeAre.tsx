@@ -1,18 +1,18 @@
 import SectionWrapper from "./SectionWrapper";
 import { Linkedin } from "lucide-react";
-import saschaImg from "@/assets/sascha-noack.jpg";
+import steffenImg from "@/assets/steffen-fixson.png";
 import markusImg from "@/assets/markus-koenig.jpg";
 
 const values = ["Ownership", "Hands-on", "Speed", "Transparency", "Efficiency", "Long-term view"];
 
 const founders = [
   {
-    name: "Sascha Noack",
-    role: "Fractional CFO & Finance Ops Advisor",
-    stats: "13+ years in finance leadership • 15+ finance ops transformed • Based in Berlin",
-    linkedin: "https://www.linkedin.com/in/sascha-noack-740b21160/",
-    photo: saschaImg,
-    bio: "Sascha spent 13 years building finance operations in German startups. Starting as a tax advisor assistant, he speaks Steuerberater language fluently and bridges external advisors and in-house teams. From working student to CFO-level responsibility, he built finance teams from scratch, supported fundraising, accelerated month-end close from weeks to days, and automated core processes. Before going freelance, he cut process time by ~80% in his prior firm, building a team that could run independently.",
+    name: "Dr. Steffen Fixson",
+    role: "Head of Client Development & Executive Advisor",
+    stats: "15+ years of advisory & client development experience • CFO advisory & Finance transformations • Based in Dubai",
+    linkedin: "https://www.linkedin.com/in/drsteffenfixson/",
+    photo: steffenImg,
+    bio: "Steffen is an executive advisor and client development leader who partners with startups and scaleups to improve and transform finance processes. His experience includes working with professional leaders across multiple departmental functions, including CFOs, CHROs, and other functional heads. He is customer-centric with a strong focus on goal achievement, supporting clients in their behavioral and organizational change to get future-ready. He holds a BSc, MSc and Ph.D.",
   },
   {
     name: "Markus König",
