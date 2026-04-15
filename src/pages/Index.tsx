@@ -3,8 +3,10 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 import WhoWeAre from "@/components/WhoWeAre";
+import Industries from "@/components/Industries";
 import Experience from "@/components/Experience";
 import Network from "@/components/Network";
+import Values from "@/components/Values";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -19,9 +21,13 @@ const Index = () => (
     <div className="section-divider" />
     <WhoWeAre />
     <div className="section-divider" />
+    <Industries />
+    <div className="section-divider" />
     <Experience />
     <div className="section-divider" />
     <Network />
+    <div className="section-divider" />
+    <Values />
     <div className="section-divider" />
     <Contact />
     <Footer />
