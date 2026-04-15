@@ -43,7 +43,7 @@ const services = [
 const Services = () =>
 <SectionWrapper id="services">
     <h2 className="text-3xl md:text-5xl font-bold text-foreground">What we do</h2>
-    <p className="mt-4 text-lg text-muted-foreground max-w-xl">From bookkeeping to fundraising — AI-powered finance operations that simply work.
+    <p className="mt-4 text-lg text-muted-foreground max-w-xl">From bookkeeping to reporting — AI-powered finance operations that simply work.
 
   </p>
 
