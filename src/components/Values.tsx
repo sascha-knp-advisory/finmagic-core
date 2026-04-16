@@ -30,6 +30,9 @@ const values = [
 const Values = () => (
   <SectionWrapper id="values">
     <h2 className="text-3xl md:text-5xl font-bold text-foreground">Our values</h2>
+    <p className="mt-4 text-lg md:text-xl text-muted-foreground">
+      Clarity in your numbers. Confidence in your decisions.
+    </p>
     <div className="mt-14 grid md:grid-cols-2 gap-8">
       {values.map((v) => (
         <div key={v.title}>

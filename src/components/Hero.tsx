@@ -60,14 +60,6 @@ const Hero = () => (
         </Button>
       </motion.div>
 
-      <motion.p
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.45 }}
-        className="mt-12 text-xl md:text-2xl font-semibold text-primary/80 tracking-tight"
-      >
-        Clarity in your numbers. Confidence in your decisions.
-      </motion.p>
     </div>
   </section>
 );

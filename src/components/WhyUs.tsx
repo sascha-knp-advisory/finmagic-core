@@ -29,6 +29,12 @@ const benefits = [
   { label: "Outcome based delivery", rest: "we focus on results, you benefit with tangible ROI" },
 ];
 
+const industries = [
+  "SaaS", "Tech-enabled services", "Climate/Energy", "Digital health",
+  "E-commerce & Marketplace", "Manufacturing & Hardware", "Mobility/Logistics", "D2C & Consumer",
+  "EdTech", "Marketing/AdTech", "FinTech/InsureTech", "Media & Digital Publishing",
+];
+
 const WhyUs = () => (
   <SectionWrapper id="why-us">
     <h2 className="text-3xl md:text-5xl font-bold text-foreground">Why work with us</h2>
@@ -71,6 +77,21 @@ const WhyUs = () => (
               <span className="font-semibold text-foreground">{b.label}:</span> {b.rest}
             </p>
           </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Industries we serve */}
+    <div className="mt-14">
+      <h3 className="text-2xl font-bold text-foreground mb-6">Industries we serve</h3>
+      <div className="flex flex-wrap gap-3">
+        {industries.map((ind) => (
+          <span
+            key={ind}
+            className="rounded-full border border-border bg-secondary px-4 py-1.5 text-sm text-muted-foreground"
+          >
+            {ind}
+          </span>
         ))}
       </div>
     </div>
