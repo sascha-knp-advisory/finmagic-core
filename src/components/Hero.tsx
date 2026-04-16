@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 const audiences = ["Startups & Scaleups", "Owner-led SMEs & Succession", "PE-backed companies"];
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center justify-center bg-topo pt-16">
-    <div className="container mx-auto px-4 md:px-8 py-24 md:py-32 max-w-4xl text-center">
+  <section className="relative min-h-[85vh] flex items-center justify-center bg-topo pt-16">
+    <div className="container mx-auto px-4 md:px-8 py-16 md:py-24 max-w-4xl text-center">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}

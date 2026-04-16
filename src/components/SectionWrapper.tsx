@@ -8,7 +8,7 @@ interface Props {
 }
 
 const SectionWrapper = ({ id, children, className = "" }: Props) => (
-  <section id={id} className={`py-20 md:py-28 ${className}`}>
+  <section id={id} className={`py-14 md:py-20 scroll-mt-20 ${className}`}>
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
