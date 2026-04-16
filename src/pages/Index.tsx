@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 import WhoWeAre from "@/components/WhoWeAre";
-import Industries from "@/components/Industries";
 import Experience from "@/components/Experience";
 import Network from "@/components/Network";
 import Values from "@/components/Values";
@@ -20,8 +19,6 @@ const Index = () => (
     <WhyUs />
     <div className="section-divider" />
     <WhoWeAre />
-    <div className="section-divider" />
-    <Industries />
     <div className="section-divider" />
     <Experience />
     <div className="section-divider" />
