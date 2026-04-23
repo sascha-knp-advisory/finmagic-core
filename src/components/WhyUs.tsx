@@ -4,7 +4,7 @@ import { CheckCircle } from "lucide-react";
 const steps = [
   {
     num: "1",
-    title: "Diagnose",
+    title: "Diagnose & Design",
     time: "1–2 weeks",
     lines: ["Diagnose status quo and define goal state", "Establish implementation timeline"],
   },
@@ -16,7 +16,7 @@ const steps = [
   },
   {
     num: "3",
-    title: "Stabilize",
+    title: "Stabilize & Transition",
     time: "ongoing",
     lines: ["Day-to-day support in Finance Operations, Controlling, and on CFO level"],
   },
