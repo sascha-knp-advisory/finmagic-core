@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
+import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

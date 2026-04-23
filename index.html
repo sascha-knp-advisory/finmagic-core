@@ -3,6 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Consent Mode v2 — defaults to denied until user accepts -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PPPMVRMB');</script>
+    <!-- End Google Tag Manager -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
     <title>KNP Advisory — AI-powered Finance Operations & CFO Support</title>
     <meta name="description" content="AI-powered finance operations and CFO support. We pair deep finance expertise with automation where it matters." />
@@ -21,9 +42,48 @@
     <meta name="twitter:title" content="KNP Advisory — AI-powered Finance Operations & CFO Support" />
     <meta name="twitter:description" content="We pair deep finance expertise with automation where it matters." />
     <meta name="twitter:image" content="https://knp-advisory.com/og-image.png?v=2" />
+
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="VERIFICATION_CODE_HERE" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "KNP Advisory",
+      "description": "AI-powered finance operations and CFO support for startups and SMEs. We pair deep finance expertise with automation where it matters.",
+      "url": "https://knp-advisory.com",
+      "logo": "https://knp-advisory.com/og-image.png",
+      "image": "https://knp-advisory.com/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 52.52,
+          "longitude": 13.405
+        },
+        "geoRadius": "50000"
+      },
+      "serviceType": ["CFO Support", "Finance Operations", "AI Automation", "Bookkeeping"],
+      "knowsAbout": ["Finance Automation", "n8n", "AI-powered Finance", "Startup CFO", "DATEV"],
+      "sameAs": [
+        "https://www.linkedin.com/company/knp-advisory/"
+      ]
+    }
+    </script>
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPPMVRMB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager -->
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input name="form-name" type="hidden" value="contact" />
       <input name="bot-field" />

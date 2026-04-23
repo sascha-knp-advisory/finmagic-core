@@ -15,7 +15,7 @@ const Privacy = () => (
       </Link>
 
       <h1 className="text-4xl font-bold mb-2">Datenschutzerklärung</h1>
-      <p className="text-muted-foreground mb-8">Stand: März 2026</p>
+      <p className="text-muted-foreground mb-8">Stand: April 2026</p>
 
       <div className="space-y-8 text-muted-foreground leading-relaxed">
 
@@ -63,6 +63,10 @@ const Privacy = () => (
                   <td className="py-2 pr-4">Bereitstellung der Website</td>
                   <td className="py-2">Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</td>
                 </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-2 pr-4">Website-Analyse (nur mit Einwilligung)</td>
+                  <td className="py-2">Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -88,6 +92,11 @@ const Privacy = () => (
                 <tr className="border-b border-border/50">
                   <td className="py-2 pr-4">Google Workspace (Google Ireland Ltd.)</td>
                   <td className="py-2 pr-4">E-Mail-Versand</td>
+                  <td className="py-2">EU/USA*</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-2 pr-4">Google Analytics (Google Ireland Ltd.)</td>
+                  <td className="py-2 pr-4">Website-Analyse (nur mit Einwilligung)</td>
                   <td className="py-2">EU/USA*</td>
                 </tr>
               </tbody>
@@ -136,8 +145,9 @@ const Privacy = () => (
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground mb-3">8. Cookies</h2>
-          <p>Diese Website verwendet keine Cookies und kein Tracking.</p>
+          <h2 className="text-xl font-semibold text-foreground mb-3">8. Cookies und Webanalyse</h2>
+          <p className="mb-2">Diese Website verwendet Google Analytics zur Analyse der Website-Nutzung. Google Analytics setzt Cookies nur nach Ihrer ausdrücklichen Einwilligung (Cookie-Banner). Ohne Einwilligung werden keine personenbezogenen Daten erhoben.</p>
+          <p>Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie Ihre Browser-Cookies löschen. Beim nächsten Besuch wird der Cookie-Banner erneut angezeigt.</p>
         </section>
 
         <section>
@@ -151,7 +161,7 @@ const Privacy = () => (
       <hr className="my-12 border-border" />
 
       <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
-      <p className="text-muted-foreground mb-8">Last updated: March 2026</p>
+      <p className="text-muted-foreground mb-8">Last updated: April 2026</p>
 
       <div className="space-y-8 text-muted-foreground leading-relaxed">
 
@@ -199,6 +209,10 @@ const Privacy = () => (
                   <td className="py-2 pr-4">Providing the website</td>
                   <td className="py-2">Art. 6(1)(f) GDPR (legitimate interest)</td>
                 </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-2 pr-4">Website analytics (consent only)</td>
+                  <td className="py-2">Art. 6(1)(a) GDPR (consent)</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -224,6 +238,11 @@ const Privacy = () => (
                 <tr className="border-b border-border/50">
                   <td className="py-2 pr-4">Google Workspace (Google Ireland Ltd.)</td>
                   <td className="py-2 pr-4">Email delivery</td>
+                  <td className="py-2">EU/USA*</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-2 pr-4">Google Analytics (Google Ireland Ltd.)</td>
+                  <td className="py-2 pr-4">Website analytics (consent only)</td>
                   <td className="py-2">EU/USA*</td>
                 </tr>
               </tbody>
@@ -267,8 +286,9 @@ const Privacy = () => (
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground mb-3">8. Cookies</h2>
-          <p>This website does not use cookies or tracking.</p>
+          <h2 className="text-xl font-semibold text-foreground mb-3">8. Cookies and Web Analytics</h2>
+          <p className="mb-2">This website uses Google Analytics for website usage analysis. Google Analytics only sets cookies after your explicit consent (cookie banner). Without consent, no personal data is collected.</p>
+          <p>You can revoke your consent at any time by clearing your browser cookies. The cookie banner will reappear on your next visit.</p>
         </section>
 
         <section>
