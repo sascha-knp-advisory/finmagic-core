@@ -7,10 +7,12 @@ interface Props {
   className?: string;
 }
 
+const hasHash = typeof window !== "undefined" && !!window.location.hash;
+
 const SectionWrapper = ({ id, children, className = "" }: Props) => (
   <section id={id} className={`py-14 md:py-20 scroll-mt-20 ${className}`}>
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={hasHash ? false : { opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
