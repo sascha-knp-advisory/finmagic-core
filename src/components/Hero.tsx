@@ -39,7 +39,7 @@ const Hero = () => (
         transition={{ duration: 0.6, delay: 0.2 }}
         className="mt-6 text-lg max-w-2xl mx-auto leading-relaxed text-muted-foreground md:text-xl"
       >
-        Built for speed, accuracy, and scale—with automation where it matters.
+        We pair deep finance expertise with automation where it matters.
       </motion.p>
 
       <motion.div

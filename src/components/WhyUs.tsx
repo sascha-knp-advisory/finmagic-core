@@ -23,10 +23,11 @@ const steps = [
 ];
 
 const benefits = [
+  { label: "Deep finance expertise", rest: "we bring deep expertise that we continuously evolve, you get tried and tested processes" },
+  { label: "Tailored solutions", rest: "we build tailored solutions to your situation so you get outstanding results" },
   { label: "Clear & reliable execution", rest: "we bring a clear plan and execute like clockwork" },
-  { label: "Better systems & processes", rest: "we build efficient workflows, you get reliable data quality" },
   { label: "Team member upskilling", rest: "we empower your team, you build internal capabilities" },
-  { label: "Outcome based delivery", rest: "we focus on results, you benefit with tangible ROI" },
+  { label: "Cost conscious", rest: "we focus on results, you benefit with tangible ROI" },
 ];
 
 const industries = [
@@ -39,7 +40,22 @@ const WhyUs = () => (
   <SectionWrapper id="why-us">
     <h2 className="text-3xl md:text-5xl font-bold text-foreground">Why work with us</h2>
 
-    {/* Our approach */}
+    {/* Benefits — now first */}
+    <div className="mt-14">
+      <h3 className="text-2xl font-bold text-foreground mb-6">Your benefits</h3>
+      <div className="space-y-4">
+        {benefits.map((b) => (
+          <div key={b.label} className="flex items-start gap-3">
+            <CheckCircle className="h-5 w-5 text-accent mt-0.5 shrink-0" />
+            <p className="text-muted-foreground text-base">
+              <span className="font-semibold text-foreground">{b.label}:</span> {b.rest}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Our approach — now second */}
     <div className="mt-14">
       <h3 className="text-2xl font-bold text-foreground mb-8">
         Our approach: clear outcomes within 1–3 months
@@ -61,21 +77,6 @@ const WhyUs = () => (
                 <li key={l} className="text-sm text-muted-foreground">{l}</li>
               ))}
             </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    {/* Benefits */}
-    <div className="mt-14">
-      <h3 className="text-2xl font-bold text-foreground mb-6">Your benefits</h3>
-      <div className="grid md:grid-cols-2 gap-4">
-        {benefits.map((b) => (
-          <div key={b.label} className="flex items-start gap-3">
-            <CheckCircle className="h-5 w-5 text-accent mt-0.5 shrink-0" />
-            <p className="text-muted-foreground text-base">
-              <span className="font-semibold text-foreground">{b.label}:</span> {b.rest}
-            </p>
           </div>
         ))}
       </div>
