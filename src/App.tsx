@@ -9,6 +9,7 @@ import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 import CookieConsent from "./components/CookieConsent";
+import SectionTracker from "./components/SectionTracker";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
+        <SectionTracker />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
