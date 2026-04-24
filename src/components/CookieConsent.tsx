@@ -9,14 +9,14 @@ declare global {
 
 const CONSENT_KEY = "knp-cookie-consent";
 
-function gtag(...args: unknown[]) {
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push(args);
-}
-
 function pushConsent(granted: boolean) {
+  window.dataLayer = window.dataLayer || [];
   const value = granted ? "granted" : "denied";
-  gtag("consent", "update", {
+  // Must use regular function + arguments object — GTM ignores plain arrays
+  const gtagFn = function () {
+    window.dataLayer.push(arguments);
+  } as (...args: unknown[]) => void;
+  gtagFn("consent", "update", {
     analytics_storage: value,
     ad_storage: value,
     ad_user_data: value,
