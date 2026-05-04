@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
+import InterimCFO from "./pages/InterimCFO";
 import CookieConsent from "./components/CookieConsent";
 import SectionTracker from "./components/SectionTracker";
 
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/" element={<Index />} />
           <Route path="/imprint" element={<Imprint />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/interim-cfo" element={<InterimCFO />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
