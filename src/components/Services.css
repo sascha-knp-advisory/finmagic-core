@@ -39,6 +39,10 @@
 .knp-services .btn-primary:hover { background: hsl(355 98% 60%); transform: translateY(-1px); box-shadow: 0 12px 24px hsl(355 98% 65% / 0.25); }
 .knp-services .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .knp-services .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.knp-services .btn-sm { padding: 10px 20px; font-size: 14px; border-radius: 9px; }
+
+/* Per-service intent CTA inside the expanded tile (progressive disclosure) */
+.knp-services .svc-cta { margin-top: 18px; }
 
 /* ─────────────  SECTION HEADER  ───────────── */
 .knp-services.section { padding: 80px 2rem; max-width: 1400px; margin: 0 auto; }
@@ -57,7 +61,7 @@
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-bottom: 14px;
+  margin-bottom: 56px;
   color: var(--text);
 }
 /* Sub heading — matches site H3 ("Your benefits", text-2xl) */

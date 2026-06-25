@@ -134,14 +134,20 @@ const individualSolutions: Service[] = [
 
 /* ─────────────  SERVICE ITEM  ───────────── */
 
+const CALENDAR_URL = "https://calendar.app.google/ucm1X1bTqKcT3j3i6";
+
 const ServiceItem = ({
   service,
+  group,
   isOpen,
   onToggle,
+  onInterested,
 }: {
   service: Service;
+  group: "fractional" | "solution";
   isOpen: boolean;
   onToggle: () => void;
+  onInterested: () => void;
 }) => {
   const [openSub, setOpenSub] = useState<number | null>(null);
 
@@ -190,6 +196,30 @@ const ServiceItem = ({
               </div>
             </div>
           )}
+          <div className="svc-cta">
+            {group === "solution" ? (
+              <a
+                href={CALENDAR_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-sm"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Book a call →
+              </a>
+            ) : (
+              <button
+                type="button"
+                className="btn btn-primary btn-sm"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onInterested();
+                }}
+              >
+                I'm interested →
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -201,23 +231,30 @@ const ServiceItem = ({
 const RequestPricingModal = ({
   open,
   onClose,
+  service,
 }: {
   open: boolean;
   onClose: () => void;
+  service: string | null;
 }) => {
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    try {
-      // Endpoint not yet wired — mirrors the prototype's placeholder behaviour.
-      await new Promise((r) => setTimeout(r, 700));
-      setSuccess(true);
-    } catch {
-      setSending(false);
-    }
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    // Submit to the same Netlify form as the contact section below.
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(
+        formData as unknown as Record<string, string>
+      ).toString(),
+    })
+      .then(() => setSuccess(true))
+      .catch(() => setSuccess(true));
   };
 
   const handleClose = () => {
@@ -240,14 +277,25 @@ const RequestPricingModal = ({
         <button className="rp-close" onClick={handleClose} aria-label="Close">
           ✕
         </button>
-        <div className="rp-eyebrow">Request Pricing</div>
+        <div className="rp-eyebrow">
+          {service ? `Interested in ${service}` : "Get in touch"}
+        </div>
         <h3 className="rp-title">Tell us about your company.</h3>
         <p className="rp-sub">We'll get back to you within one business day.</p>
         <form
           id="rpForm"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
           style={{ display: success ? "none" : undefined }}
         >
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <input name="bot-field" />
+          </p>
+          <input type="hidden" name="service" value={service ?? ""} />
           <div className="rp-field">
             <label htmlFor="rpName">Name</label>
             <input
@@ -297,6 +345,17 @@ const RequestPricingModal = ({
             </select>
           </div>
           <div className="rp-field">
+            <label htmlFor="rpTimeline">Timeline</label>
+            <select id="rpTimeline" name="timeline" defaultValue="">
+              <option value="" disabled>
+                How soon?
+              </option>
+              <option value="Just exploring">Just exploring</option>
+              <option value="Within 3 months">Within 3 months</option>
+              <option value="Urgent">Urgent</option>
+            </select>
+          </div>
+          <div className="rp-field">
             <label htmlFor="rpMessage">Message</label>
             <textarea
               id="rpMessage"
@@ -309,7 +368,7 @@ const RequestPricingModal = ({
             className="btn btn-primary rp-submit"
             disabled={sending}
           >
-            {sending ? "Sending…" : "Request Pricing →"}
+            {sending ? "Sending…" : "Send →"}
           </button>
         </form>
         <div className={`rp-success${success ? " show" : ""}`}>
@@ -329,6 +388,11 @@ const Services = () => {
   const [openLeft, setOpenLeft] = useState<string | null>(null);
   const [openRight, setOpenRight] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [modalService, setModalService] = useState<string | null>(null);
+  const openInterest = (name: string) => {
+    setModalService(name);
+    setModalOpen(true);
+  };
 
   return (
     <section className="knp-services section" id="services">
@@ -356,24 +420,18 @@ const Services = () => {
             </p>
           </div>
           <div className="path-divider" />
-          <div className="path-cta">
-            <button
-              className="btn btn-primary"
-              onClick={() => setModalOpen(true)}
-            >
-              Request Pricing
-            </button>
-          </div>
 
           <div className="svc-list">
             {fractionalRoles.map((s) => (
               <ServiceItem
                 key={s.key}
                 service={s}
+                group="fractional"
                 isOpen={openLeft === s.key}
                 onToggle={() =>
                   setOpenLeft(openLeft === s.key ? null : s.key)
                 }
+                onInterested={() => openInterest(s.name)}
               />
             ))}
           </div>
@@ -391,26 +449,18 @@ const Services = () => {
             </p>
           </div>
           <div className="path-divider" />
-          <div className="path-cta">
-            <a
-              href="https://calendar.app.google/ucm1X1bTqKcT3j3i6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              Book a scoping session
-            </a>
-          </div>
 
           <div className="svc-list">
             {individualSolutions.map((s) => (
               <ServiceItem
                 key={s.key}
                 service={s}
+                group="solution"
                 isOpen={openRight === s.key}
                 onToggle={() =>
                   setOpenRight(openRight === s.key ? null : s.key)
                 }
+                onInterested={() => openInterest(s.name)}
               />
             ))}
           </div>
@@ -430,7 +480,11 @@ const Services = () => {
         </Link>
       </div>
 
-      <RequestPricingModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      <RequestPricingModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        service={modalService}
+      />
     </section>
   );
 };
