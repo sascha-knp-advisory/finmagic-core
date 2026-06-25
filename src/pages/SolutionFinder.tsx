@@ -13,41 +13,32 @@ const SolutionFinder = () => {
         meta: { label: string; val: string }[];
       }
     > = {
+      // Texts kept in sync with the "What we do" tiles (Services.tsx) — that is the source of truth.
       cashflow: {
         type: "Individual Solution",
         nameHtml: "Cash Flow <em>Forecasting</em>",
-        desc: "Optimize your working capital and regain clarity about your current and future cash position. A short- and long-term forecast you can actually trust — including scenario modelling, runway clarity and stakeholder-ready outputs. Built to outlive the engagement.",
-        meta: [
-          { label: "Setup", val: "5–10 days" },
-          { label: "Pricing", val: "from €3,800" },
-        ],
+        desc: "Regain clarity about your current and future cash position and optimize your working capital. A short- and long-term forecast you can actually trust. Includes scenario modelling, runway clarity and stakeholder-ready outputs — built to outlive the engagement.",
+        meta: [{ label: "Setup", val: "3-10 days" }],
       },
       budgeting: {
         type: "Individual Solution",
         nameHtml: "<em>Budgeting</em>",
-        desc: "Annual budget and rolling forecast process designed for your business model. From P&L to cash, with built-in scenarios and gap analysis. Best booked Jul–Sep to be ready for the next planning cycle.",
-        meta: [
-          { label: "Setup", val: "2–4 weeks" },
-          { label: "Pricing", val: "from €6,500" },
-          { label: "Season", val: "Jul–Sep ideal" },
-        ],
+        desc: "Annual budget & rolling forecast process designed for your organization and business model. From marketing & sales budget to P&L and cash, with built-in scenarios. Budgets your teams own and use. Best booked July – September to prepare your annual budget for board approval.",
+        meta: [{ label: "Setup period", val: "2-4 weeks" }],
       },
       fcfo: {
         type: "Fractional Role",
         nameHtml: "Fractional <em>CFO</em>",
-        desc: "An operational, hands-on CFO backed by the newest tools and workflows. We build or rebuild your reporting, financial planning, cash forecasting and budgeting — and represent the finance function in board and investor meetings.",
-        meta: [
-          { label: "Engagement", val: "2–4 days / month" },
-          { label: "Pricing", val: "€190/h Senior" },
-        ],
+        desc: "An operational, hands-on CFO backed by the newest tools and workflows. We build or rebuild your reporting, financial planning, cash forecasting and budgeting — and represent the finance function in board and investor meetings. We establish the operating cadence, coordinate your team, and own the timely close.",
+        meta: [{ label: "Engagement", val: "2–4 days / month" }],
       },
       ffpa: {
         type: "Fractional Role",
         nameHtml: "Fractional <em>FP&A</em>",
-        desc: "Planning, budgeting and forecasting as an embedded function. Build the operating model that ties your strategy to the cash you actually have. Scenario thinking built into every artefact.",
+        desc: "Planning, budgeting and forecasting as an embedded function. Build the operating model that ties your strategy to the cash you actually have. Scenario thinking built into every artefact — best engaged July – September ahead of the annual planning cycle (also see our Budgeting solution).",
         meta: [
-          { label: "Engagement", val: "1–3 days / month" },
-          { label: "Pricing", val: "€190/h Senior" },
+          { label: "Setup", val: "1-5 days" },
+          { label: "Ongoing", val: "0.5–2 days / month" },
         ],
       },
       controller: {
@@ -55,49 +46,36 @@ const SolutionFinder = () => {
         nameHtml: "Fractional <em>Controlling</em>",
         desc: "Monthly close in 5 days, investor-ready numbers, reliable reporting cadence. We own the reporting layer. You focus on running the business.",
         meta: [
-          { label: "Setup", val: "3–7 days" },
+          { label: "Setup", val: "1-5 days" },
           { label: "Ongoing", val: "0.5–2 days / month" },
-          { label: "Subscription", val: "€500–4,000 / mo" },
         ],
       },
       audit: {
         type: "Individual Solution",
         nameHtml: "Finance Process <em>Audit & Automation</em>",
-        desc: "Identify where processes stall with a brief diagnostic of your finance function. Output: a prioritised, scoped roadmap with quick wins, structural fixes and a clear next step.",
-        meta: [
-          { label: "Engagement", val: "2–5 days" },
-          { label: "Pricing", val: "from €2,800" },
-          { label: "Output", val: "Roadmap + quick wins" },
-        ],
+        desc: "Identify where processes stall with our signature <em>Finance Process Audit</em> of your finance function. A prioritised, scoped roadmap with quick wins and structural fixes provides clarity and clear next steps. The lowest-friction way to identify exactly where to start — and the natural predecessor to deeper automation work.",
+        meta: [{ label: "Engagement", val: "2–5 days" }],
       },
       reporting: {
         type: "Individual Solution",
         nameHtml: "Investor Reporting <em>as a Service</em>",
-        desc: "Monthly and quarterly reporting as a service. Based on your accounting data — automated structure, board-ready outputs, no more Excel gymnastics. The most direct path to accurate numbers and full visibility into your finance health.",
-        meta: [
-          { label: "Setup", val: "3–7 days" },
-          { label: "Subscription", val: "€500–4,000 / mo" },
-          { label: "USP", val: "DATEV / Addison native" },
-        ],
+        desc: "Monthly and quarterly reporting as a service or one-time setup. Based on your accounting data — automated structure, board-ready outputs, no more Excel gymnastics. The most direct path to accurate numbers and full visibility into your financial health.",
+        meta: [{ label: "Setup", val: "1-5 days" }],
       },
       bookkeeping: {
         type: "Individual Solution",
         nameHtml: "Bookkeeping <em>as a Service</em>",
-        desc: "A modern bookkeeping function with a tax advisor backbone. Clean books, automated approval and payment workflows — no more chasing your tax advisor mid-month.",
+        desc: "A modern bookkeeping function with automation where it matters: Clean books, automated approval and payment workflows — no more chasing your tax advisor mid-month. We run the day-to-day or do a one-time setup so your numbers are always ready for the close.",
         meta: [
-          { label: "Initial", val: "1–5 days" },
-          { label: "Subscription", val: "€500–1,500 / mo" },
-          { label: "Plus", val: "Steuerberater fees" },
+          { label: "Setup", val: "1-5 days" },
+          { label: "Subscription", val: "€750-2,500 / month" },
         ],
       },
       kpis: {
         type: "Individual Solution",
         nameHtml: "Performance Management <em>& KPIs</em>",
         desc: "North-star metrics, operating cadence and board packs. We map your business so the numbers that matter become visible. Decisions based on your actual drivers, not wishlist KPIs.",
-        meta: [
-          { label: "Setup", val: "2–3 weeks" },
-          { label: "Pricing", val: "from €5,400" },
-        ],
+        meta: [{ label: "Setup period", val: "3-6 weeks" }],
       },
     };
 
