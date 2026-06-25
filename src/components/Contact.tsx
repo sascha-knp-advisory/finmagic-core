@@ -53,7 +53,7 @@ const Contact = () => {
               </SelectContent>
             </Select>
             <Textarea name="message" placeholder="Message" rows={4} className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
-            <Button variant="accent" size="lg" type="submit" className="w-full text-base">
+            <Button variant="accent" size="lg" type="submit" className="w-full text-[15px]">
               Request intro call
             </Button>
           </form>
