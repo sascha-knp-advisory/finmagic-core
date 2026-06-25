@@ -332,10 +332,10 @@ const Services = () => {
 
   return (
     <section className="knp-services section" id="services">
-      <div className="section-eyebrow">Services</div>
       <h2>
-        Tailored to your needs<span className="coral-dot">.</span>
+        Services<span className="coral-dot">.</span>
       </h2>
+      <h3 className="section-subhead">Tailored to your needs</h3>
       <p className="lead">
         {" "}
         We meet you where the pain is: Hire our experts on a fractional basis, or

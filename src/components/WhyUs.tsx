@@ -38,7 +38,7 @@ const industries = [
 
 const WhyUs = () => (
   <SectionWrapper id="why-us">
-    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Why work with us</h2>
+    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Why work with us<span className="text-accent">.</span></h2>
 
     {/* Benefits — now first */}
     <div className="mt-14">

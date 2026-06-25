@@ -25,7 +25,7 @@ const Contact = () => {
     <SectionWrapper id="contact">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-foreground text-center">
-          Get in touch to build a finance system you can trust.
+          Get in touch to build a finance system you can trust<span className="text-accent">.</span>
         </h2>
 
         {submitted ? (

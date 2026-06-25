@@ -26,7 +26,7 @@ const founders = [
 
 const WhoWeAre = () => (
   <SectionWrapper id="team">
-    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Who we are</h2>
+    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Who we are<span className="text-accent">.</span></h2>
     <p className="mt-4 text-lg text-muted-foreground">Over 30 years of financial leadership.</p>
 
     <div className="mt-8 flex flex-wrap gap-3">

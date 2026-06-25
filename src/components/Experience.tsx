@@ -12,7 +12,7 @@ const cases = [
 
 const Experience = () => (
   <SectionWrapper id="experience">
-    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Case studies</h2>
+    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Case studies<span className="text-accent">.</span></h2>
     <p className="mt-4 text-lg text-muted-foreground">Patterns we've solved</p>
 
     <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">

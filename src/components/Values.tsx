@@ -29,7 +29,7 @@ const values = [
 
 const Values = () => (
   <SectionWrapper id="values">
-    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Our values</h2>
+    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Our values<span className="text-accent">.</span></h2>
     <p className="mt-4 text-lg md:text-xl text-muted-foreground">
       Clarity in your numbers. Confidence in your decisions.
     </p>

@@ -16,7 +16,7 @@ const categories = [
 
 const Network = () => (
   <SectionWrapper id="network">
-    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Partner network</h2>
+    <h2 className="text-3xl md:text-5xl font-bold text-foreground">Partner network<span className="text-accent">.</span></h2>
     <p className="mt-4 text-lg text-muted-foreground max-w-xl">
       When needed, we bring trusted specialists — so you move faster without losing quality.
     </p>
