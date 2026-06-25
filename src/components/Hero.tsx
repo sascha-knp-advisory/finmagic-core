@@ -1,49 +1,33 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import "./Hero.css";
 
+// Markus' paired taglines — first clause (accent) "means" second clause.
+const PHRASES = [
+  { a: "automated processes,", b: "faster close." },
+  { a: "better reporting,", b: "stronger decisions." },
+  { a: "real-time visibility,", b: "more control." },
+  { a: "clear actions,", b: "faster results." },
+  { a: "financial clarity,", b: "in the boardroom." },
+];
+
 const Hero = () => {
-  const typewriterRef = useRef<HTMLSpanElement>(null);
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const el = typewriterRef.current;
-    if (!el) return;
+    const interval = setInterval(() => {
+      setVisible(false); // fade out
+      const swap = setTimeout(() => {
+        setIndex((prev) => (prev + 1) % PHRASES.length);
+        setVisible(true); // fade in next phrase
+      }, 500);
+      return () => clearTimeout(swap);
+    }, 3200);
 
-    const words = ["better", "automated", "hands-on"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let timeoutId: ReturnType<typeof setTimeout>;
-
-    function type() {
-      const current = words[wordIndex];
-
-      if (isDeleting) {
-        charIndex--;
-      } else {
-        charIndex++;
-      }
-
-      el!.textContent = current.substring(0, charIndex);
-
-      let speed = isDeleting ? 70 : 110;
-
-      if (!isDeleting && charIndex === current.length) {
-        speed = 2200;
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        speed = 350;
-      }
-
-      timeoutId = setTimeout(type, speed);
-    }
-
-    // Start after a short initial delay
-    timeoutId = setTimeout(type, 800);
-
-    return () => clearTimeout(timeoutId);
+    return () => clearInterval(interval);
   }, []);
+
+  const phrase = PHRASES[index];
 
   return (
     <section id="hero" className="knp-hero">
@@ -51,16 +35,12 @@ const Hero = () => {
         <span>For Startups &amp; Scaleups</span>
       </div>
       <h1>
-        Finance operations and CFO support —{" "}
-        <span className="hero-rotate">
-          <em>
-            <span id="typewriter" ref={typewriterRef}></span>
-            <span className="typewriter-cursor"></span>
-          </em>{" "}
-          <em>processes</em>,
+        Finance operations and CFO support —
+        <span className="hero-rotate-line">
+          <span className={`hero-phrase${visible ? " is-visible" : ""}`}>
+            <em>{phrase.a}</em> {phrase.b}
+          </span>
         </span>
-        <br />
-        faster close.
       </h1>
       <p>We pair deep finance expertise with hands-on implementation where it matters.</p>
       <div className="hero-cta" style={{ justifyContent: "center" }}>

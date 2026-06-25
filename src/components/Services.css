@@ -80,7 +80,7 @@
 .knp-services .lead {
   font-size: 17px;
   color: var(--text-mute);
-  max-width: 620px;
+  max-width: 960px;
   line-height: 1.6;
   margin-bottom: 56px;
 }
@@ -114,10 +114,10 @@
 }
 .knp-services .path-title {
   font-family: inherit;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   margin-bottom: 10px;
   color: var(--text);
 }

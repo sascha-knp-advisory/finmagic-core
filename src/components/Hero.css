@@ -16,7 +16,12 @@
   --border-soft: hsl(244 30% 22%);
 
   font-family: 'DM Sans', sans-serif;
-  padding: 96px 56px 64px;
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 56px 72px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -47,7 +52,7 @@
   line-height: 1.04;
   letter-spacing: -0.03em;
   margin-bottom: 24px;
-  max-width: 900px;
+  max-width: 1150px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -57,29 +62,20 @@
   font-weight: 300;
 }
 
-/* Keep the rotating word + "processes," glued together so the phrase
-   never breaks across lines while the word length changes */
-.knp-hero .hero-rotate {
-  white-space: nowrap;
+/* Rotating Markus taglines — crossfade, fixed-height line so nothing jumps.
+   The rotating phrase sits on its own line below the fixed prefix. */
+.knp-hero .hero-rotate-line {
+  display: block;
+  min-height: 2.2em; /* reserve 2 lines so 1- vs 2-line phrases never shift content */
+  margin-top: 6px;
 }
-.knp-hero #typewriter {
+.knp-hero .hero-phrase {
   display: inline-block;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
-
-/* Typewriter cursor */
-.knp-hero .typewriter-cursor {
-  display: inline-block;
-  width: 3px;
-  height: 0.85em;
-  background: var(--text);
-  margin-left: 2px;
-  vertical-align: middle;
-  border-radius: 1px;
-  animation: knp-blink-cursor 0.65s ease-in-out infinite;
-}
-@keyframes knp-blink-cursor {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+.knp-hero .hero-phrase.is-visible {
+  opacity: 1;
 }
 
 .knp-hero p {
