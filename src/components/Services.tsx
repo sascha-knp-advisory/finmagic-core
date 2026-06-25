@@ -54,7 +54,7 @@ const individualSolutions: Service[] = [
       "A modern bookkeeping function with automation where it matters: Clean books, automated approval and payment workflows — no more chasing your tax advisor mid-month. We run the day-to-day or do a one-time setup so your numbers are always ready for the close.",
     meta: [
       { label: "Setup", value: "1-5 days" },
-      { label: "Subscription", value: "€750-2,500 / month" },
+      { label: "Subscription", value: "from €750 / month" },
     ],
   },
   {

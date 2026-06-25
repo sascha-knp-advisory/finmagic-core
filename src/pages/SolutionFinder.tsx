@@ -68,7 +68,7 @@ const SolutionFinder = () => {
         desc: "A modern bookkeeping function with automation where it matters: Clean books, automated approval and payment workflows — no more chasing your tax advisor mid-month. We run the day-to-day or do a one-time setup so your numbers are always ready for the close.",
         meta: [
           { label: "Setup", val: "1-5 days" },
-          { label: "Subscription", val: "€750-2,500 / month" },
+          { label: "Subscription", val: "from €750 / month" },
         ],
       },
       kpis: {
