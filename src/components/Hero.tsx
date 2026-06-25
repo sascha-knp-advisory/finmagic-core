@@ -52,11 +52,14 @@ const Hero = () => {
       </div>
       <h1>
         Finance operations and CFO support —{" "}
-        <em>
-          <span id="typewriter" ref={typewriterRef}></span>
-          <span className="typewriter-cursor"></span>
-        </em>{" "}
-        <em>processes</em>,<br />
+        <span className="hero-rotate">
+          <em>
+            <span id="typewriter" ref={typewriterRef}></span>
+            <span className="typewriter-cursor"></span>
+          </em>{" "}
+          <em>processes</em>,
+        </span>
+        <br />
         faster close.
       </h1>
       <p>We pair deep finance expertise with hands-on implementation where it matters.</p>

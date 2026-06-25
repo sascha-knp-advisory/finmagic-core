@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "What we do", href: "#services" },
+  { label: "Services", href: "#services" },
   { label: "Why us", href: "#why-us" },
   { label: "Who we are", href: "#team" },
   { label: "Case studies", href: "#experience" },
@@ -34,12 +33,6 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Link
-            to="/solution-finder"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Solution Finder
-          </Link>
           <Button variant="accent" size="sm" asChild>
             <a href="https://calendar.app.google/ucm1X1bTqKcT3j3i6" target="_blank" rel="noopener noreferrer">Book intro call</a>
           </Button>
@@ -68,13 +61,6 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Link
-            to="/solution-finder"
-            onClick={() => setOpen(false)}
-            className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Solution Finder
-          </Link>
           <Button variant="accent" size="sm" className="mt-2 w-full" asChild>
             <a href="https://calendar.app.google/ucm1X1bTqKcT3j3i6" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Book intro call</a>
           </Button>

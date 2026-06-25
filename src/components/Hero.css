@@ -57,6 +57,15 @@
   font-weight: 300;
 }
 
+/* Keep the rotating word + "processes," glued together so the phrase
+   never breaks across lines while the word length changes */
+.knp-hero .hero-rotate {
+  white-space: nowrap;
+}
+.knp-hero #typewriter {
+  display: inline-block;
+}
+
 /* Typewriter cursor */
 .knp-hero .typewriter-cursor {
   display: inline-block;

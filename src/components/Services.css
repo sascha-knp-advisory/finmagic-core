@@ -41,7 +41,7 @@
 .knp-services .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ─────────────  SECTION HEADER  ───────────── */
-.knp-services.section { padding: 64px 56px 96px; max-width: 1280px; margin: 0 auto; }
+.knp-services.section { padding: 80px 2rem; max-width: 1400px; margin: 0 auto; }
 .knp-services .section-eyebrow {
   font-size: 12px;
   letter-spacing: 0.22em;
