@@ -16,8 +16,16 @@ const queryClient = new QueryClient();
 
 function useHashScroll() {
   useEffect(() => {
+    // Don't let the browser restore the previous scroll position on reload —
+    // always start at the top unless an explicit deep-link hash is present.
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
     const hash = window.location.hash;
-    if (!hash) return;
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
     const id = hash.slice(1);
     let attempts = 0;
     const tryScroll = () => {

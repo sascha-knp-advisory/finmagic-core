@@ -51,6 +51,7 @@
   font-weight: 700;
   line-height: 1.04;
   letter-spacing: -0.03em;
+  text-wrap: balance;
   margin-bottom: 24px;
   max-width: 1150px;
   margin-left: auto;
@@ -66,7 +67,7 @@
    The rotating phrase sits on its own line below the fixed prefix. */
 .knp-hero .hero-rotate-line {
   display: block;
-  min-height: 2.2em; /* reserve 2 lines so 1- vs 2-line phrases never shift content */
+  min-height: 1.15em; /* one line — all phrases fit on a single line at desktop */
   margin-top: 6px;
 }
 .knp-hero .hero-phrase {
@@ -77,11 +78,14 @@
 .knp-hero .hero-phrase.is-visible {
   opacity: 1;
 }
+.knp-hero .hero-dot {
+  color: var(--accent);
+}
 
 .knp-hero p {
   font-size: 19px;
   color: var(--text-mute);
-  max-width: 620px;
+  max-width: 860px;
   margin: 0 auto 40px;
   line-height: 1.55;
 }

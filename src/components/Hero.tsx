@@ -3,11 +3,11 @@ import "./Hero.css";
 
 // Markus' paired taglines — first clause (accent) "means" second clause.
 const PHRASES = [
-  { a: "automated processes,", b: "faster close." },
-  { a: "better reporting,", b: "stronger decisions." },
-  { a: "real-time visibility,", b: "more control." },
-  { a: "clear actions,", b: "faster results." },
-  { a: "financial clarity,", b: "in the boardroom." },
+  { a: "automated processes,", b: "faster close" },
+  { a: "better reporting,", b: "stronger decisions" },
+  { a: "real-time visibility,", b: "more control" },
+  { a: "clear actions,", b: "faster results" },
+  { a: "financial clarity,", b: "in the boardroom" },
 ];
 
 const Hero = () => {
@@ -35,10 +35,11 @@ const Hero = () => {
         <span>For Startups &amp; Scaleups</span>
       </div>
       <h1>
-        Finance operations and CFO support —
+        Finance operations and CFO&nbsp;support —
         <span className="hero-rotate-line">
           <span className={`hero-phrase${visible ? " is-visible" : ""}`}>
             <em>{phrase.a}</em> {phrase.b}
+            <span className="hero-dot">.</span>
           </span>
         </span>
       </h1>
