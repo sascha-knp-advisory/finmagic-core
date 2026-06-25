@@ -69,6 +69,17 @@
 }
 .knp-sf .back-btn:hover { border-color: var(--accent); color: var(--text); }
 
+.knp-sf .nav-right { display: flex; align-items: center; gap: 10px; }
+.knp-sf .sf-close {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text-mute); text-decoration: none;
+  font-size: 15px; line-height: 1; cursor: pointer;
+  transition: all 0.2s;
+}
+.knp-sf .sf-close:hover { border-color: var(--accent); color: var(--text); }
+
 /* ─── MAIN ─── */
 .knp-sf main {
   position: relative; z-index: 1;

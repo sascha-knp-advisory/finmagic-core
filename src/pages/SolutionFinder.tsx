@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./SolutionFinder.css";
 
 const SolutionFinder = () => {
@@ -363,13 +364,18 @@ const SolutionFinder = () => {
   return (
     <div className="knp-sf" id="knp-sf-root">
       <header className="nav">
-        <a href="home.html" className="nav-logo">
+        <Link to="/" className="nav-logo">
           KNP Advisory<span className="dot">.</span>
-        </a>
+        </Link>
         <div className="progress" id="progress"></div>
-        <button className="back-btn" id="backBtn" style={{ visibility: "hidden" }}>
-          ← Back
-        </button>
+        <div className="nav-right">
+          <button className="back-btn" id="backBtn" style={{ visibility: "hidden" }}>
+            ← Back
+          </button>
+          <Link to="/" className="sf-close" aria-label="Exit Solution Finder">
+            ✕
+          </Link>
+        </div>
       </header>
 
       <main>

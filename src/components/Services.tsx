@@ -333,7 +333,7 @@ const Services = () => {
   return (
     <section className="knp-services section" id="services">
       <h2>
-        Services<span className="coral-dot">.</span>
+        What we do<span className="coral-dot">.</span>
       </h2>
       <h3 className="section-subhead">Tailored to your needs</h3>
       <p className="lead">
