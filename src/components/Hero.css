@@ -1,0 +1,113 @@
+/* ─────────────  HERO (ported 1:1 from entwurf-07-font prototype)  ─────────────
+   Self-contained: CSS variables from the prototype's :root are redeclared on
+   the .knp-hero root so this component does not depend on global tokens. */
+
+.knp-hero {
+  --bg: hsl(244 63% 13%);
+  --bg-2: hsl(244 55% 16%);
+  --bg-3: hsl(244 45% 20%);
+  --bg-4: hsl(244 40% 18%);
+  --text: hsl(228 100% 93%);
+  --text-mute: hsl(228 40% 72%);
+  --text-dim: hsl(228 30% 55%);
+  --accent: hsl(355 98% 65%);
+  --accent-2: hsl(355 98% 75%);
+  --border: hsl(244 30% 25%);
+  --border-soft: hsl(244 30% 22%);
+
+  font-family: 'DM Sans', sans-serif;
+  padding: 96px 56px 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text);
+}
+
+.knp-hero .audience-pills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.knp-hero .audience-pills span {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--text-mute);
+  background: hsl(244 45% 20% / 0.6);
+  border: 1px solid var(--border);
+  padding: 9px 22px;
+  border-radius: 999px;
+}
+
+.knp-hero h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.knp-hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 300;
+}
+
+/* Typewriter cursor */
+.knp-hero .typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  background: var(--text);
+  margin-left: 2px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: knp-blink-cursor 0.65s ease-in-out infinite;
+}
+@keyframes knp-blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.knp-hero p {
+  font-size: 19px;
+  color: var(--text-mute);
+  max-width: 620px;
+  margin: 0 auto 40px;
+  line-height: 1.55;
+}
+
+.knp-hero .hero-cta {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.knp-hero .btn {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 26px;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: all 0.25s;
+  border: 1px solid transparent;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.knp-hero .btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.knp-hero .btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}

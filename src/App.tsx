@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
+import SolutionFinder from "./pages/SolutionFinder";
 import NotFound from "./pages/NotFound";
 import CookieConsent from "./components/CookieConsent";
 import SectionTracker from "./components/SectionTracker";
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/" element={<Index />} />
           <Route path="/imprint" element={<Imprint />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/solution-finder" element={<SolutionFinder />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
