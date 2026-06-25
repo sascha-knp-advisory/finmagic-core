@@ -339,7 +339,7 @@ const Services = () => {
       <p className="lead">
         {" "}
         We meet you where the pain is: Hire our experts on a fractional basis, or
-        pick just the service you need.
+        pick just the solution you need.
       </p>
 
       <div className="paths">
