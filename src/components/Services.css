@@ -369,6 +369,7 @@
   font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--text-dim); font-weight: 500;
 }
+.knp-services .rp-field label .rp-req { color: hsl(355 98% 65%); margin-left: 3px; }
 .knp-services .rp-field input {
   background: var(--bg-4); border: 1px solid var(--border);
   color: var(--text); font-family: inherit; font-size: 15px;

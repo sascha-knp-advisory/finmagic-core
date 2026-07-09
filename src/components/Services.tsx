@@ -297,7 +297,7 @@ const RequestPricingModal = ({
           </p>
           <input type="hidden" name="service" value={service ?? ""} />
           <div className="rp-field">
-            <label htmlFor="rpName">Name</label>
+            <label htmlFor="rpName">Name <span className="rp-req">*</span></label>
             <input
               type="text"
               id="rpName"
@@ -308,7 +308,7 @@ const RequestPricingModal = ({
             />
           </div>
           <div className="rp-field">
-            <label htmlFor="rpEmail">Email</label>
+            <label htmlFor="rpEmail">Email <span className="rp-req">*</span></label>
             <input
               type="email"
               id="rpEmail"
@@ -319,7 +319,7 @@ const RequestPricingModal = ({
             />
           </div>
           <div className="rp-field">
-            <label htmlFor="rpCompany">Company</label>
+            <label htmlFor="rpCompany">Company <span className="rp-req">*</span></label>
             <input
               type="text"
               id="rpCompany"

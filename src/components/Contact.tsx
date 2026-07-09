@@ -34,11 +34,14 @@ const Contact = () => {
             <p className="mt-2 text-muted-foreground">We'll get back to you within 24 hours.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" className="mt-12 space-y-5">
+          <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="mt-12 space-y-5">
             <input type="hidden" name="form-name" value="contact" />
-            <Input name="name" placeholder="Name" required className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
-            <Input name="email" type="email" placeholder="Email" required className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
-            <Input name="company" placeholder="Company" className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
+            <p hidden>
+              <input name="bot-field" />
+            </p>
+            <Input name="name" placeholder="Name *" required className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
+            <Input name="email" type="email" placeholder="Email *" required className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
+            <Input name="company" placeholder="Company *" required className="bg-card border-border text-foreground placeholder:text-muted-foreground" />
             <Select name="stage">
               <SelectTrigger className="bg-card border-border text-foreground">
                 <SelectValue placeholder="Stage" />
