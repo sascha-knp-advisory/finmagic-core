@@ -2,11 +2,13 @@ import { useEffect, useRef } from "react";
 import "./Hero.css";
 
 // Markus' paired taglines — first clause (accent) "means" second clause.
-const PHRASES = [
+const PHRASES: { a: string; b: string; plain?: boolean }[] = [
   { a: "automated processes,", b: "faster close" },
   { a: "better reporting,", b: "stronger decisions" },
   { a: "real-time visibility,", b: "more control" },
   { a: "clear actions,", b: "faster results" },
+  // Payoff line — first clause in lavender (no accent), only the dot stays red.
+  { a: "financial clarity,", b: "in the boardroom", plain: true },
 ];
 
 const Hero = () => {
@@ -20,8 +22,11 @@ const Hero = () => {
     const timers: ReturnType<typeof setTimeout>[] = [];
 
     function show() {
-      const { a, b } = PHRASES[pi];
-      rot.innerHTML = `<em>${a}</em> ${b}<span class="hero-dot">.</span>`;
+      const { a, b, plain } = PHRASES[pi];
+      // plain = payoff line: first clause in lavender (no accent em), red dot stays.
+      rot.innerHTML = plain
+        ? `${a} ${b}<span class="hero-dot">.</span>`
+        : `<em>${a}</em> ${b}<span class="hero-dot">.</span>`;
       rot.style.opacity = "0";
       rot.style.transform = "translateY(14px)";
       requestAnimationFrame(() =>
