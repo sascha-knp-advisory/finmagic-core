@@ -7,8 +7,8 @@ const PHRASES: { a: string; b: string; plain?: boolean }[] = [
   { a: "better reporting,", b: "stronger decisions" },
   { a: "real-time visibility,", b: "more control" },
   { a: "clear actions,", b: "faster results" },
-  // Payoff line — first clause in lavender (no accent), only the dot stays red.
-  { a: "financial clarity,", b: "in the boardroom", plain: true },
+  // Payoff line — full phrase in accent red, dot stays neutral text color.
+  { a: "financial clarity", b: "in the boardroom", plain: true },
 ];
 
 const Hero = () => {
@@ -23,9 +23,9 @@ const Hero = () => {
 
     function show() {
       const { a, b, plain } = PHRASES[pi];
-      // plain = payoff line: first clause in lavender (no accent em), red dot stays.
+      // plain = payoff line: full phrase in accent red, dot in neutral text color.
       rot.innerHTML = plain
-        ? `${a} ${b}<span class="hero-dot">.</span>`
+        ? `<span class="hero-accent-full">${a} ${b}</span><span class="hero-dot-neutral">.</span>`
         : `<em>${a}</em> ${b}<span class="hero-dot">.</span>`;
       rot.style.opacity = "0";
       rot.style.transform = "translateY(14px)";

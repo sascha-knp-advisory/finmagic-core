@@ -76,6 +76,12 @@
 .knp-hero .hero-dot {
   color: var(--accent);
 }
+.knp-hero .hero-accent-full {
+  color: var(--accent);
+}
+.knp-hero .hero-dot-neutral {
+  color: var(--text);
+}
 
 .knp-hero p {
   font-size: 19px;
