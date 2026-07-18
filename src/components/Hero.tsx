@@ -23,9 +23,9 @@ const Hero = () => {
 
     function show() {
       const { a, b, plain } = PHRASES[pi];
-      // plain = payoff line: full phrase in accent red, dot in neutral text color.
+      // plain = payoff line: full phrase styled like the other accent clauses (em), dot in neutral text color.
       rot.innerHTML = plain
-        ? `<span class="hero-accent-full">${a} ${b}</span><span class="hero-dot-neutral">.</span>`
+        ? `<em>${a} ${b}</em><span class="hero-dot-neutral">.</span>`
         : `<em>${a}</em> ${b}<span class="hero-dot">.</span>`;
       rot.style.opacity = "0";
       rot.style.transform = "translateY(14px)";
