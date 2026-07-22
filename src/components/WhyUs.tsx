@@ -27,7 +27,7 @@ const benefits = [
   { label: "Tailored solutions", rest: "we build tailored solutions to your situation so you get outstanding results" },
   { label: "Clear & reliable execution", rest: "we bring a clear plan and execute with precision" },
   { label: "Team member upskilling", rest: "we empower your team, you build internal capabilities" },
-  { label: "Cost conscious", rest: "we focus on results, you benefit with tangible ROI" },
+  { label: "ROI obsessed", rest: "we focus on results, so your investment pays off" },
 ];
 
 const industries = [
