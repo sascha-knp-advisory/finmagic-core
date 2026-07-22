@@ -44,6 +44,13 @@ const fractionalRoles: Service[] = [
       { label: "Ongoing", value: "0.5–2 days / month" },
     ],
   },
+  {
+    key: "interim",
+    name: "Interim CFO & Finance Ops Leadership",
+    desc:
+      "We go all-in — to stabilize, scale, or reset your finance engine. Full-time embedded leadership for companies navigating a transition: a departing CFO, a funding round, or rapid operational scaling that the existing team can't absorb.",
+    meta: [{ label: "Engagement period", value: "3-18 months" }],
+  },
 ];
 
 const individualSolutions: Service[] = [
@@ -72,6 +79,13 @@ const individualSolutions: Service[] = [
     meta: [{ label: "Setup period", value: "2-4 weeks" }],
   },
   {
+    key: "cashflow",
+    name: "Cash Flow Forecasting",
+    desc:
+      "Regain clarity about your current and future cash position and optimize your working capital. A short- and long-term forecast you can actually trust. Includes scenario modelling, runway clarity and stakeholder-ready outputs — built to outlive the engagement.",
+    meta: [{ label: "Setup", value: "3-10 days" }],
+  },
+  {
     key: "performance",
     name: "Performance Management & KPIs",
     desc:
@@ -96,13 +110,6 @@ const individualSolutions: Service[] = [
     ],
   },
   {
-    key: "cashflow",
-    name: "Cash Flow Forecasting",
-    desc:
-      "Regain clarity about your current and future cash position and optimize your working capital. A short- and long-term forecast you can actually trust. Includes scenario modelling, runway clarity and stakeholder-ready outputs — built to outlive the engagement.",
-    meta: [{ label: "Setup", value: "3-10 days" }],
-  },
-  {
     key: "audit",
     name: "Finance Process Audit & Automation",
     desc: (
@@ -122,13 +129,6 @@ const individualSolutions: Service[] = [
     desc:
       "Get your numbers and narrative ready for fundraising or exit. We prepare the financial story, data room and quality of earnings documentation that investors and acquirers need — so you move faster and negotiate from a position of strength.",
     meta: [{ label: "Engagement period", value: "4-8 weeks + optional process support" }],
-  },
-  {
-    key: "interim",
-    name: "Interim CFO & Finance Ops Leadership",
-    desc:
-      "We go all-in — to stabilize, scale, or reset your finance engine. Full-time embedded leadership for companies navigating a transition: a departing CFO, a funding round, or rapid operational scaling that the existing team can't absorb.",
-    meta: [{ label: "Engagement period", value: "3-18 months" }],
   },
 ];
 
@@ -402,7 +402,7 @@ const Services = () => {
       <h3 className="section-subhead">Tailored to your needs</h3>
       <p className="lead">
         {" "}
-        We meet you where the pain is: Hire our experts on a fractional basis, or
+        We meet you where the pain is: Hire us on a fractional basis, or
         pick just the solution you need.
       </p>
 

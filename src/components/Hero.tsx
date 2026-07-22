@@ -59,7 +59,7 @@ const Hero = () => {
         <span>For Startups &amp; Scaleups</span>
       </div>
       <h1>
-        Finance operations and CFO&nbsp;support —
+        CFO Services and Finance&nbsp;operations —
         <span className="hero-rotate-line">
           <span className="hero-phrase" ref={rotRef}></span>
         </span>
