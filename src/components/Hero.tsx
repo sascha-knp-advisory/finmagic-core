@@ -2,13 +2,12 @@ import { useEffect, useRef } from "react";
 import "./Hero.css";
 
 // Markus' paired taglines — first clause (accent) "means" second clause.
-const PHRASES: { a: string; b: string; plain?: boolean }[] = [
-  { a: "automated processes,", b: "faster close" },
-  { a: "better reporting,", b: "stronger decisions" },
-  { a: "real-time visibility,", b: "more control" },
-  { a: "clear actions,", b: "faster results" },
-  // Payoff line — full phrase in accent red, dot stays neutral text color.
-  { a: "financial clarity", b: "in the boardroom", plain: true },
+const PHRASES: { a: string; b: string }[] = [
+  { a: "Automated processes,", b: "faster close" },
+  { a: "Better reporting,", b: "stronger decisions" },
+  { a: "Real-time visibility,", b: "more control" },
+  { a: "Clear actions,", b: "faster results" },
+  { a: "Financial clarity", b: "in the boardroom" },
 ];
 
 const Hero = () => {
@@ -22,11 +21,8 @@ const Hero = () => {
     const timers: ReturnType<typeof setTimeout>[] = [];
 
     function show() {
-      const { a, b, plain } = PHRASES[pi];
-      // plain = payoff line: full phrase styled like the other accent clauses (em), dot in neutral text color.
-      rot.innerHTML = plain
-        ? `<em>${a} ${b}</em><span class="hero-dot-neutral">.</span>`
-        : `<em>${a}</em> ${b}<span class="hero-dot">.</span>`;
+      const { a, b } = PHRASES[pi];
+      rot.innerHTML = `<em>${a}</em> ${b}<span class="hero-dot">.</span>`;
       rot.style.opacity = "0";
       rot.style.transform = "translateY(14px)";
       requestAnimationFrame(() =>
@@ -59,7 +55,7 @@ const Hero = () => {
         <span>For Startups &amp; Scaleups</span>
       </div>
       <h1>
-        CFO Services and Finance&nbsp;operations —
+        <span className="hero-prefix-line">CFO Services and Finance&nbsp;operations</span>
         <span className="hero-rotate-line">
           <span className="hero-phrase" ref={rotRef}></span>
         </span>

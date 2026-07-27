@@ -22,7 +22,7 @@
   justify-content: center;
   align-items: center;
   padding: 96px 56px 72px;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   text-align: center;
   color: var(--text);
@@ -47,13 +47,12 @@
 
 .knp-hero h1 {
   font-family: 'DM Sans', sans-serif;
-  font-size: clamp(40px, 6vw, 72px);
   font-weight: 700;
   line-height: 1.04;
   letter-spacing: -0.03em;
   text-wrap: balance;
   margin-bottom: 24px;
-  max-width: 1150px;
+  max-width: 1450px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -63,21 +62,25 @@
   font-weight: 300;
 }
 
+/* Fixed prefix line — sized up from the rotating line below it. */
+.knp-hero .hero-prefix-line {
+  display: block;
+  font-size: clamp(42px, 5.4vw, 80px);
+}
+
 /* Rotating Markus taglines — crossfade, fixed-height line so nothing jumps.
    The rotating phrase sits on its own line below the fixed prefix. */
 .knp-hero .hero-rotate-line {
   display: block;
+  font-size: clamp(40px, 6vw, 72px);
   min-height: 1.15em; /* one line — all phrases fit on a single line at desktop */
-  margin-top: 6px;
+  margin-top: 22px;
 }
 .knp-hero .hero-phrase {
   display: inline-block;
 }
 .knp-hero .hero-dot {
   color: var(--accent);
-}
-.knp-hero .hero-dot-neutral {
-  color: var(--text);
 }
 
 .knp-hero p {
