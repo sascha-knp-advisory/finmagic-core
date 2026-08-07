@@ -1,7 +1,7 @@
 import SectionWrapper from "./SectionWrapper";
 import { Linkedin } from "lucide-react";
-import steffenImg from "@/assets/steffen-fixson.jpg";
 import markusImg from "@/assets/markus-koenig.jpg";
+import giuliaImg from "@/assets/giulia-weiss.jpg";
 
 const values = ["Ownership", "Hands-on", "Speed", "Transparency", "Efficiency", "Long-term view"];
 
@@ -15,12 +15,12 @@ const founders = [
     bio: "Markus is a finance & operations leader who brings control, clarity, and momentum in high-pressure growth phases. After 10 years in investment banking and an MSc in Management at Stanford, he moved into CFO roles, taking over and transforming finance functions. He has led financings from crowd-style rounds and debt to IPO-scale outcomes, and spent a year leading finance in West Africa for a tech group. He combines rigorous execution with a strong passion for leadership development and transformational coaching.",
   },
   {
-    name: "Dr. Steffen Fixson",
-    role: "Head of Client Development & Executive Advisor",
-    stats: "15+ years of advisory & client development experience • CFO advisory & Finance transformations",
-    linkedin: "https://www.linkedin.com/in/drsteffenfixson/",
-    photo: steffenImg,
-    bio: "Steffen is an executive advisor and client development leader who partners with startups and scaleups to improve and transform finance processes. His experience includes working with professional leaders across multiple departmental functions, including CFOs, CHROs, and other functional heads. He is customer-centric with a strong focus on goal achievement, supporting clients in their behavioral and organizational change to get future-ready. He holds a BSc, MSc and Ph.D.",
+    name: "Giulia Weiß",
+    role: "Finance Operations & Reporting",
+    stats: "Finance leadership across education & tech • Bond financing, reporting & process design",
+    linkedin: "https://www.linkedin.com/in/giulia-wei%C3%9F-b263861b4/",
+    photo: giuliaImg,
+    bio: "Giulia is a finance and project management professional who brings structure, transparency, and sound financial judgment to complex organisations. Her experience spans bond financing in the double-digit millions, representation at shareholder and advisory board level, and the build-up of reporting structures and finance processes in scaling companies, including post-acquisition integrations. With a background spanning management, finance, and technology, she turns complex financial information into clear, decision-ready insights for management teams and boards.",
   },
 ];
 
