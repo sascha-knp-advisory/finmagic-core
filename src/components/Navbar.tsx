@@ -34,7 +34,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="accent" size="sm" asChild>
-            <a href="https://calendar.app.google/K7pmmV7ZcQS9XSBH8" target="_blank" rel="noopener noreferrer">Book intro call</a>
+            <a href="https://calendar.app.google/JxhvCPSHq32uFtEKA" target="_blank" rel="noopener noreferrer">Book intro call</a>
           </Button>
         </div>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="accent" size="sm" className="mt-2 w-full" asChild>
-            <a href="https://calendar.app.google/K7pmmV7ZcQS9XSBH8" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Book intro call</a>
+            <a href="https://calendar.app.google/JxhvCPSHq32uFtEKA" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Book intro call</a>
           </Button>
         </div>
       )}

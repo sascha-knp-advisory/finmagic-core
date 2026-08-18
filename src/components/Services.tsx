@@ -134,7 +134,7 @@ const individualSolutions: Service[] = [
 
 /* ─────────────  SERVICE ITEM  ───────────── */
 
-const CALENDAR_URL = "https://calendar.app.google/K7pmmV7ZcQS9XSBH8";
+const CALENDAR_URL = "https://calendar.app.google/JxhvCPSHq32uFtEKA";
 
 const ServiceItem = ({
   service,

@@ -178,7 +178,7 @@ const SolutionFinder = () => {
       const btnLabel = isFractional ? "Request Pricing" : "Book a scoping call";
       const btnAttrs = isFractional
         ? `href="#" data-rp-open="1"`
-        : `href="https://calendar.app.google/K7pmmV7ZcQS9XSBH8" target="_blank" rel="noopener noreferrer"`;
+        : `href="https://calendar.app.google/JxhvCPSHq32uFtEKA" target="_blank" rel="noopener noreferrer"`;
       const metaCells = s.meta
         .map(
           (m) =>
