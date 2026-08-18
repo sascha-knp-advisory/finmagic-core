@@ -65,7 +65,7 @@ const Contact = () => {
         <div className="mt-8 text-center space-y-2">
           <p className="text-muted-foreground text-sm">
             Or book directly:{" "}
-            <a href="https://calendar.app.google/ucm1X1bTqKcT3j3i6" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Calendar link</a>
+            <a href="https://calendar.app.google/K7pmmV7ZcQS9XSBH8" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Calendar link</a>
           </p>
           <p className="text-muted-foreground text-xs">We reply within 24 hours. No spam.</p>
         </div>
